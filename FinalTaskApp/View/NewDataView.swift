@@ -10,6 +10,9 @@ import SwiftUI
 struct NewDataView: View {
     @ObservedObject var homeData : HomeViewModel
     @Environment(\.managedObjectContext) var context
+    @State var isShowingimagePicker = false
+    @State var showImage = UIImage()
+    
     var body: some View {
         
         VStack{
@@ -17,7 +20,7 @@ struct NewDataView: View {
             HStack{
                 
                 Text("\(homeData.updateItem == nil ? "Add New" : "Update") Task")
-                    .font(.system(size: 65))
+                    .font(.system(size: 45))
                     .fontWeight(.heavy)
                     .foregroundColor(.black)
                 
@@ -27,6 +30,28 @@ struct NewDataView: View {
             
             TextEditor(text: $homeData.content)
                 .padding()
+                .foregroundColor(homeData.content == "type here" ? .gray : .primary)
+                .onTapGesture {
+                    if homeData.content == "type here" {
+                        homeData.content = ""
+                    }
+                }
+            
+            Image(uiImage: showImage)
+                .resizable()
+                .frame(width: 100, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .foregroundColor(.black)
+                .padding()
+            
+            Button(action: {
+                isShowingimagePicker.toggle()
+            }, label: {
+                Text("Select Image")
+            })
+            .sheet(isPresented: $isShowingimagePicker, content: {
+                AddImagePickerView(isPresented: self.$isShowingimagePicker, selectedImage: self.$showImage)
+            })
+            .padding()
             
             Divider()
                 .padding(.horizontal)

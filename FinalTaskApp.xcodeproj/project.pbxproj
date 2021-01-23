@@ -19,6 +19,7 @@
 		3A694C3025B6192D000BC28F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A694C2F25B6192D000BC28F /* HomeViewModel.swift */; };
 		3A694C3525B61B9D000BC28F /* NewDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A694C3425B61B9D000BC28F /* NewDataView.swift */; };
 		3A694C3A25B62609000BC28F /* DateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A694C3925B62609000BC28F /* DateButton.swift */; };
+		5690841A25BBEB2B00F80351 /* AddImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5690841925BBEB2B00F80351 /* AddImagePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		3A694C2F25B6192D000BC28F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		3A694C3425B61B9D000BC28F /* NewDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDataView.swift; sourceTree = "<group>"; };
 		3A694C3925B62609000BC28F /* DateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateButton.swift; sourceTree = "<group>"; };
+		5690841925BBEB2B00F80351 /* AddImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImagePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				3A694C2A25B6188D000BC28F /* Home.swift */,
 				3A694C3425B61B9D000BC28F /* NewDataView.swift */,
 				3A694C3925B62609000BC28F /* DateButton.swift */,
+				5690841925BBEB2B00F80351 /* AddImagePickerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				3A694BED25B60D31000BC28F /* ContentView.swift in Sources */,
 				3A694C2B25B6188D000BC28F /* Home.swift in Sources */,
 				3A694BEB25B60D31000BC28F /* FinalTaskAppApp.swift in Sources */,
+				5690841A25BBEB2B00F80351 /* AddImagePickerView.swift in Sources */,
 				3A694C3A25B62609000BC28F /* DateButton.swift in Sources */,
 				3A694BF725B60D36000BC28F /* FinalTaskApp.xcdatamodeld in Sources */,
 				3A694C3525B61B9D000BC28F /* NewDataView.swift in Sources */,

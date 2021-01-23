@@ -10,8 +10,9 @@ import CoreData
 
 class HomeViewModel : ObservableObject{
     
-    @Published var content = ""
+    @Published var content = "type here"
     @Published var date = Date()
+    @Published var img = Data()
     
     // For NewData sheet...
     @Published var isNewData = false
@@ -56,6 +57,9 @@ class HomeViewModel : ObservableObject{
             // Means Update Old Data
             updateItem.date = date
             updateItem.content = content
+            updateItem.img = img
+            //MARK: Data prompted
+            print(updateItem.img ?? 0)
             
             try! context.save()
             
@@ -63,14 +67,18 @@ class HomeViewModel : ObservableObject{
             
             updateItem = nil
             isNewData.toggle()
-            content = ""
+            content = "type here"
             date = Date()
+            img = Data()
             return
         }
         
         let newTask = Task(context: context)
         newTask.date = date
         newTask.content = content
+        newTask.img = img
+        //MARK: no data
+//        print(newTask.img ?? 0)
         
         // saving data
         
@@ -78,8 +86,9 @@ class HomeViewModel : ObservableObject{
             try context.save()
             // success means closing view
             isNewData.toggle()
-            content = ""
+            content = "type here"
             date = Date()
+            img = Data()
         }
         catch{
             print(error.localizedDescription)
@@ -93,6 +102,8 @@ class HomeViewModel : ObservableObject{
         //toggling the newDataView
         date = item.date!
         content = item.content!
+//        img = item.img!
         isNewData.toggle()
     }
+    
 }
